@@ -13,7 +13,9 @@ class Solution:
       
         for key in num_map:
             while num >= key:
-                result += num_map[key]
-                num -= key     
+                times = num / key
+                addition = num_map[key] * int(times)
+                result += addition
+                num = num % key
 
         return result
